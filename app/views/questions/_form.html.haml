@@ -1,0 +1,20 @@
+= form_for(@question) do |f|
+  .field
+    = f.label :question 
+    = f.text_field :question 
+
+  .field
+    = f.label :topic 
+    = f.text_field :topic 
+
+  .field
+    = f.label :size 
+    = f.text_field :size 
+
+  .field
+    = f.label :visibility 
+    = f.text_field :visibility 
+
+  .actions
+    = f.submit "Post Question" 
+  

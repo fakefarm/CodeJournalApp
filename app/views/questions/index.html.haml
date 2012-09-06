@@ -1,0 +1,20 @@
+%table
+  %tr
+    %th Topic
+    %th Question
+    %th Size
+    %th Visibility
+    %th 
+    %th 
+
+  - @questions.each do |question|
+      
+    %tr
+      %td= question.topic 
+      %td= link_to question.question, question 
+      %td= question.size 
+      %td= question.visibility 
+      %td= link_to 'edit', edit_question_path(question) 
+      %td= link_to 'kill', question, confirm: "Are you a hotshot?", method: :delete 
+
+= link_to 'New Question', new_question_path
