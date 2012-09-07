@@ -1,20 +1,24 @@
-%table
+%table.table.table-hover.table-condensed
   %tr
-    %th Topic
     %th Question
+    %th Topic
     %th Size
+    %th Project
+    %th Comments
     %th Visibility
-    %th 
-    %th 
+    %th
+    %th
 
   - @questions.each do |question|
-      
-    %tr
-      %td= question.topic 
-      %td= link_to question.question, question 
-      %td= question.size 
-      %td= question.visibility 
-      %td= link_to 'edit', edit_question_path(question) 
-      %td= link_to 'kill', question, confirm: "Are you a hotshot?", method: :delete 
 
-= link_to 'New Question', new_question_path
+    %tr
+      %td= link_to question.question, question
+      %td= question.topic
+      %td= question.size
+      %td= question.project.name
+      %td
+      %td= question.visibility
+      %td= link_to 'edit', edit_question_path(question)
+      %td= link_to 'kill', question, confirm: "Are you a hotshot?", method: :delete
+
+.btn= link_to 'New Question', new_question_path

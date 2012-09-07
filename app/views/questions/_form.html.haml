@@ -1,20 +1,24 @@
 = form_for(@question) do |f|
   .field
-    = f.label :question 
-    = f.text_field :question 
+    = f.label :question
+    = f.text_field :question
 
   .field
-    = f.label :topic 
-    = f.text_field :topic 
+    = f.label :topic
+    = f.text_field :topic
 
   .field
-    = f.label :size 
-    = f.text_field :size 
+    = f.label :size
+    = f.text_field :size
 
   .field
-    = f.label :visibility 
-    = f.text_field :visibility 
+    = f.label :visibility
+    = f.text_field :visibility
+
+  .field
+    = f.label :project_id, "What project?"
+    = f.collection_select :project_id, Project.all, :id, :name
 
   .actions
-    = f.submit "Post Question" 
-  
+    = f.submit "Post Question"
+

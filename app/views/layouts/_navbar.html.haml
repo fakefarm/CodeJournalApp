@@ -1,0 +1,21 @@
+.brand Code Journal
+%ul.nav.nav-links
+  %li= link_to 'Questions', questions_path
+  %li= link_to 'Tasks'
+  %li= link_to 'Goals'
+  %li= link_to 'Projects', projects_path
+
+%ul.btn-group
+  %button.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown"}
+    New
+    .caret
+  %ul.dropdown-menu
+    %li
+      %a= link_to "Question", new_question_path
+    %li
+      %a= link_to "Task"
+    %li
+      %a= link_to "Goal"
+    %li.divider
+    %li
+      %a= link_to "Project", new_project_path

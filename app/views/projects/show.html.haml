@@ -1,0 +1,11 @@
+%h1= @project.name
+
+%h2 About
+= @project.about
+
+%h2 Questions
+- @question.each do |question|
+  - if question.project == @project.name
+    = puts question.name
+
+

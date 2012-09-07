@@ -1,6 +1,7 @@
 CodeJournalApp::Application.routes.draw do
 
 resources :questions
+resources :projects
 
 get 'index2' => 'questions#index2'
 

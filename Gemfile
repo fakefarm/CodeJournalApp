@@ -8,6 +8,8 @@ gem 'rails', '3.2.8'
 gem 'sqlite3'
 gem 'haml'
 
+
+
 group :production do
   gem 'pg'
   gem 'thin'
@@ -19,6 +21,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'bootstrap-sass', '~> 2.1.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

@@ -1,0 +1,11 @@
+=form_for(@project) do |f|
+  .field
+    =f.label "Project Name"
+    =f.text_field :name
+
+  .field
+    =f.label "Brief description of this project"
+    =f.text_area :about, :rows => "5"
+
+  .actions
+    =f.submit "Create Project Journal"
