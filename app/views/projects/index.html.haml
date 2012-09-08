@@ -1,4 +1,26 @@
-%h1 Active Projects
+%h1 Active
+%table.table.table-hover
+  %tr
+    %th Name
+    %th Summary
+    %th Mentors
+    %th Questions
+    %th Goals
+    %th Tasks
+    %th Repo
+
+    - @projects.each do |p|
+      %tr
+        %td= link_to p.name, p
+        %td.muted= p.about
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))
+        %th
+          .i.icon-file
+
+%h1 Completed
 %table.table.table-hover
   %tr
     %th Name
@@ -10,7 +32,7 @@
     - @projects.each do |p|
       %tr
         %td= link_to p.name, p
-        %td= link_to "3"
-        %td= link_to "5"
-        %td= link_to "9"
-        %td= link_to "2"
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))
+        %td= link_to (rand(10))

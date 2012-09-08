@@ -1,8 +1,7 @@
 CodeJournalApp::Application.routes.draw do
 
-resources :questions
-resources :projects
-resources :stack
+resources :questions, :tasks, :goals, :projects, :stack, :library
+resources :journal
 
 get 'index2' => 'questions#index2'
 

@@ -1,8 +1,15 @@
 @import "bootstrap";
 
+body{
+background-image:url('striped_lens.png');
+}
+
 .container-fluid{
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  padding: 3%;
+  background: white;
+  box-shadow: 1px 2px 6px gray;
 }
 
 .navbar{
@@ -12,9 +19,14 @@
   float: right;
 }
 
-
-
 .row-fluid{
   width: 80%;
   margin: 0 auto;
+}
+
+footer{
+  background: gray;
+  padding: 5%;
+  margin: 5% 0 0 0;
+  overflow: auto;
 }

@@ -1,3 +1,4 @@
+%h1 Open
 %table.table.table-hover.table-condensed
   %tr
     %th Question
@@ -16,9 +17,33 @@
       %td= question.topic
       %td= question.size
       %td= question.project.name
-      %td
+      %td= link_to (rand(10))
       %td= question.visibility
       %td= link_to 'edit', edit_question_path(question)
       %td= link_to 'kill', question, confirm: "Are you a hotshot?", method: :delete
 
 .btn= link_to 'New Question', new_question_path
+
+%h1 Closed
+%table.table.table-hover.table-condensed
+  %tr
+    %th Question
+    %th Topic
+    %th Size
+    %th Project
+    %th Comments
+    %th Visibility
+    %th
+    %th
+
+  - @questions.each do |question|
+
+    %tr
+      %td= link_to question.question, question
+      %td= question.topic
+      %td= question.size
+      %td= question.project.name
+      %td= link_to (rand(10))
+      %td= question.visibility
+      %td= link_to 'edit', edit_question_path(question)
+      %td= link_to 'kill', question, confirm: "Are you a hotshot?", method: :delete

@@ -1,10 +1,14 @@
 .brand= link_to 'Code Journal', root_path
 %ul.nav.nav-links
-  %li= link_to 'Questions', questions_path
-  %li= link_to '#Tasks'
-  %li= link_to '#Goals'
-  %li= link_to 'Projects', projects_path
-  %li= link_to 'My Stack', stack_index_path
+  %li= link_to '/questions', questions_path
+  %li= link_to '/tasks', tasks_path
+  %li= link_to '/goals', goals_path
+  %li= link_to '/projects', projects_path
+  %li= link_to '/stack', stack_index_path
+  %li= link_to '/library', library_index_path
+  %li= link_to '/journal', journal_index_path
+  %li= link_to '/mentors'
+  %li= link_to '/mentees'
 
 %ul.btn-group
   %button.btn.btn-success.dropdown-toggle{"data-toggle" => "dropdown"}
