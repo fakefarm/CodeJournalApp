@@ -14,8 +14,7 @@
       %td= link_to task.description, task
       %td= task.type_of_task
       %td= task.size
-      /  %td= task.project.name
-      %td= link_to (rand(10))
+      %td= link_to task.project.name, task.project
 
 
 .btn= link_to 'New Task', new_task_path

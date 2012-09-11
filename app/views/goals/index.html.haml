@@ -1,5 +1,20 @@
 %h1 Goals
 
-%h2 Current
+%table.table.table-hover.table-condensed
 
-%h2 Complleted
+  %tr
+    %th Goal
+    %th Project
+
+
+  - @goals.each do |goal|
+
+    %tr
+      %td= link_to goal.goals, goal
+      %td= goal.project.name
+
+.btn=link_to 'new goal', new_goal_path
+
+
+
+%h2 Completed
