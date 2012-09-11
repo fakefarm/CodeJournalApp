@@ -1,6 +1,22 @@
 %h1 Tasks
 
 %h2 Open
+%table.table.table-hover.table-condensed
+  %tr
+    %th Task
+    %th Type of Task
+    %th Size
+    %th Project
+
+  - @tasks.each do |task|
+
+    %tr
+      %td= link_to task.description, task
+      %td= task.type_of_task
+      %td= task.size
+      /  %td= task.project.name
+      %td= link_to (rand(10))
 
 
-%h2 Closed
+.btn= link_to 'New Task', new_task_path
+

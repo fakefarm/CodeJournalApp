@@ -13,11 +13,11 @@
 
 
   .field
-    = f.label :visibility
-    = f.text_field :visibility
+    = f.label "Check box if you want this question to be private"
+    = f.check_box :visibility
 
   .field
-    = f.label :project_id, "What project?"
+    = f.label :project_id, "What project is this quesiton related to?"
     = f.collection_select :project_id, Project.all, :id, :name
 
   .actions
