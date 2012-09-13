@@ -6,7 +6,7 @@
     %th Mentors
     %th Questions
     %th Goals
-    %th Tasks
+    %th Tracker
     %th Repo
 
     - @projects.each do |p|
@@ -16,8 +16,8 @@
         %td= link_to (rand(10))
         %td= link_to (rand(10))
         %td= link_to (rand(10))
-        %td= link_to (rand(10))
-        %th
+        %td= link_to "", p.url, class: "i icon-file", target: "_blank"
+        %td
           .i.icon-file
 .btn=link_to "New Project", new_project_path
 

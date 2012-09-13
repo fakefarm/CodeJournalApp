@@ -9,7 +9,14 @@ background-image:url('striped_lens.png');
   margin: 0 auto;
   padding: 3%;
   background: white;
-  box-shadow: 1px 2px 6px gray;
+}
+
+.user-links{
+  ul{
+  display: inline;
+  margin: .5%;
+  }
+  text-align: right;
 }
 
 .navbar{
