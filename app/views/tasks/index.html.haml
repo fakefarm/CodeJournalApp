@@ -1,21 +1,12 @@
 %h1 Tasks
 
-%h2 Open
 %table.table.table-hover.table-condensed
   %tr
-    %th Task
-    %th Type of Task
-    %th Size
     %th Project
+    %th Tracker
 
-  - @tasks.each do |task|
-
+  - @projects.each do |project|
     %tr
-      %td= link_to task.description, task
-      %td= task.type_of_task
-      %td= task.size
-      %td= link_to task.project.name, task.project
-
-
-.btn= link_to 'New Task', new_task_path
+      %td= project.name
+      %td= link_to "Tracker Story", project.url, target: "_blank"
 

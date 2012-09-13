@@ -1,0 +1,28 @@
+body.home{
+  background: url(background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.home{
+  h1{
+    color: red;
+    text-align: center;
+  }
+  .signup{
+    background: white;
+    padding: 2%;
+    h1{
+      float:left;
+    }
+    button{
+      width: 40%;
+      float: right;
+    }
+    overflow: auto;
+  }
+
+}
+

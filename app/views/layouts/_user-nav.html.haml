@@ -1,6 +1,6 @@
 .eyebrow-nav
   - if current_user
-    Signed in as
+    Welcome
     = current_user.name
     = link_to "Sign Out", signout_path
   - else
