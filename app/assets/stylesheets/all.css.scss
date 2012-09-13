@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+
+
 body{
 background-image:url('striped_lens.png');
 }
@@ -11,7 +14,17 @@ background-image:url('striped_lens.png');
   background: white;
 }
 
-.user-links{
+#flash_notice{
+  padding: .5%;
+  margin: .5%;
+  background: #ffff99;
+  border: 1px solid $grayMediumLight;
+  width: 70%;
+  float: left;
+}
+
+.eyebrow-nav{
+  margin: 1.5%;
   ul{
   display: inline;
   margin: .5%;
