@@ -10,22 +10,26 @@ body.home{
   .headline{
     h1{
       color: #3a3329;
-      font-size: 7.5em;
+      font-size: 7em;
       margin: 2%;
       padding: 3%;
       text-align: center;
+      text-shadow: 1px 1px 2px black;
+      font-family: "museo-slab",serif;
     }
     h2{
       font-family: georgia, serif;
       text-align: center;
+      font-style: italic;
     }
   }
   .signup{
     background: rgba(203,226,216,.8);
     padding: 5% 2%;
     margin: 3%;
-    @include border-radius(10px);
+    @include border-radius(8px);
     @include box-shadow(inset 0px 0 18px rgb(174,194,186));
+    border: 1px solid rgb(174,194,166);
     h1{
       float:left;
     }
