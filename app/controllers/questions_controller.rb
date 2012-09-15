@@ -1,7 +1,9 @@
 class QuestionsController < ApplicationController
 
+
+
   def index
-    @questions = Question.all
+    @questions = current_user.questions
   end
 
   def new
@@ -9,7 +11,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(params[:question])
+    @question = current_user.questions.build(params[:question])
+
     redirect_to '/questions' if @question.save
   end
 

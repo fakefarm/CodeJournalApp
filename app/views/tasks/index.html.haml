@@ -5,8 +5,8 @@
     %th Project
     %th Tracker
 
-  - @projects.each do |project|
+  - @tasks.each do |task|
     %tr
-      %td= project.name
-      %td= link_to "Tracker Story", project.url, target: "_blank"
+      %td= task.description
+      %td= link_to "Tracker Story", '#', target: "_blank"
 

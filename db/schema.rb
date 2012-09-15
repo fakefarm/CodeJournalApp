@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120913173749) do
+ActiveRecord::Schema.define(:version => 20120915145653) do
 
   create_table "goals", :force => true do |t|
     t.boolean  "completed"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20120913173749) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "goals"
+    t.integer  "user_id"
   end
 
   create_table "libraries", :force => true do |t|
@@ -38,6 +39,8 @@ ActiveRecord::Schema.define(:version => 20120913173749) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "url"
+    t.string   "repo"
+    t.integer  "user_id"
   end
 
   create_table "questions", :force => true do |t|
@@ -48,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20120913173749) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "project_id"
+    t.text     "answer"
+    t.integer  "user_id"
   end
 
   create_table "tasks", :force => true do |t|
@@ -59,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20120913173749) do
     t.datetime "updated_at",   :null => false
     t.string   "type_of_task"
     t.integer  "project_id"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

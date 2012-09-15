@@ -1,9 +1,9 @@
 .brand= link_to 'Code Journal', root_path
 %ul.nav.nav-links
-  %li= link_to '/questions', questions_path
-  %li= link_to '/tasks', tasks_path
-  %li= link_to '/goals', goals_path
   %li= link_to '/projects', projects_path
+  %li= link_to '/questions', questions_path
+  %li= link_to '/goals', goals_path
+  %li= link_to '/tasks', tasks_path
   / %li= link_to '/stack', stack_index_path
   / %li= link_to '/library', library_index_path
   / %li= link_to '/journal', journal_index_path
@@ -18,16 +18,9 @@
     %li
       %a= link_to "Question", new_question_path
     %li
-      %a= link_to "Task"
+      %a= link_to "Task", new_task_path
     %li
-      %a= link_to "Goal"
+      %a= link_to "Goal", new_goal_patha
     %li.divider
     %li
       %a= link_to "Project", new_project_path
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

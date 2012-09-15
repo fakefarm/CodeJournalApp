@@ -1,8 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
-    @projects = Project.all
+    @tasks = current_user.tasks
   end
 
   def new
@@ -10,7 +9,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params[:task])
+    @task = current_user.tasks.build(params[:task])
     redirect_to '/tasks' if @task.save
   end
 

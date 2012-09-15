@@ -1,7 +1,7 @@
 class GoalsController < ApplicationController
 
   def index
-    @goals = Goal.all
+    @goals = current_user.goals
   end
 
   def new
@@ -9,7 +9,8 @@ class GoalsController < ApplicationController
   end
 
   def create
-    @goal = Goal.new(params[:goal])
+    @goal = current_user.goals.build(params[:goal])
+
     redirect_to '/goals' if @goal.save
   end
 

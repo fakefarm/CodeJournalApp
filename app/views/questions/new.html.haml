@@ -1,3 +1,28 @@
 %h1 New Question
-= render 'form'
+= form_for(@question) do |f|
+  .field
+    = f.label :question
+    = f.text_field :question
+
+  .field
+    = f.label :topic
+    = f.text_field :topic
+
+  .field
+    = f.label :size
+    = f.text_field :size
+
+
+  .field
+    = f.label "Check box if you want this question to be private"
+    = f.check_box :visibility
+
+  .field
+    = f.label :project_id, "What project is this quesiton related to?"
+    = f.collection_select :project_id, Project.all, :id, :name
+
+  .actions
+    = f.submit "Post Question"
+
+
 = link_to "Back", questions_path
