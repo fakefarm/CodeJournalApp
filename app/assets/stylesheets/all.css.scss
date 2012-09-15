@@ -2,16 +2,23 @@
 
 $grayMediumLight: #eaeaea;
 
+h1{
+  font-family: museo-slab;
+  font-weight: 700;
+}
+
 
 body{
 background-image:url('striped_lens.png');
 }
 
 .container-fluid{
-  width: 70%;
+  width: 68.2%;
   margin: 0 auto;
   padding: 3%;
   background: white;
+  @include box-shadow(0 0 5px #e4e4e4);
+  @include border-radius(3px)
 }
 
 #flash_notice{

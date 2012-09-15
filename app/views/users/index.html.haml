@@ -1,0 +1,12 @@
+%h1 Coders
+
+%table.table.table-hover.table-condensed
+  %tr
+    %th Member
+
+  - @users.each do |user|
+
+    %tr
+      %td= link_to user.name, user
+
+

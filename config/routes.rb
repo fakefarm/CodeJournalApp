@@ -1,7 +1,7 @@
 CodeJournalApp::Application.routes.draw do
 
   resources :questions, :tasks, :goals, :projects, :stack, :library
-  resources :journal
+  resources :journal, :users
 
 
   root to: 'static#index'
