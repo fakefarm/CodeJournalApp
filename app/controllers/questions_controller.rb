@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-
+  # before_filter :require_login, :only => [:index, :new, :create]
 
   def index
     @questions = current_user.questions

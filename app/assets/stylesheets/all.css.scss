@@ -2,11 +2,16 @@
 
 $grayMediumLight: #eaeaea;
 
-h1{
-  font-family: museo-slab;
+h1.tk-museo-slab{
+  font-family: "museo-slab",serif;
   font-weight: 700;
+  color: #3a3329;
 }
 
+p {
+  font-family: "museo",serif;
+  font-weight: 300;
+}
 
 body{
 background-image:url('striped_lens.png');
@@ -26,7 +31,7 @@ background-image:url('striped_lens.png');
   margin: .5%;
   background: #ffff99;
   border: 1px solid $grayMediumLight;
-  width: 70%;
+  width: 40%;
   float: left;
 }
 
@@ -49,4 +54,8 @@ background-image:url('striped_lens.png');
 .row-fluid{
   width: 80%;
   margin: 0 auto;
+}
+
+img.span5{
+  width: 200px;
 }

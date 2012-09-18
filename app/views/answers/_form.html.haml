@@ -1,0 +1,12 @@
+= form_for(@answer, :url => question_answers_path(@question)) do |f|
+
+  .field
+  = f.label :summary
+  = f.text_field :title, :size => 100
+
+  .field
+  = f.label :body
+  = f.text_area :body, :rows => 4
+
+  .actions
+  = f.submit

@@ -1,6 +1,13 @@
 %h1= @question.question
 
-%p= @question.answer
+%button.btn= link_to "Add an Answer",  new_question_answer_path(@question)
+
+%h2 Answers
+%hr
+- @question.answers.each do |answer|
+  %h4= link_to answer.title, answer
+  = answer.body
+  %hr
 
 %section
   = link_to "edit", edit_question_path(@question) |

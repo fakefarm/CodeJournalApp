@@ -22,10 +22,6 @@
     = f.label :project_id, "What project is this quesiton related to?"
     = f.collection_select :project_id, Project.all, :id, :name
 
-  .field
-    = f.label :answer
-    = f.text_area :answer
-
   .actions
     = f.submit "Post Question"
 

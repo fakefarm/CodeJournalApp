@@ -1,1 +1,46 @@
-%h1 show
+/ - @user.each do |user|
+/   %h1 user.name
+
+
+%img.span3{:src => "https://twimg0-a.akamaihd.net/profile_images/2596823373/v7yfalozymqez5qmk4vb.png"}/
+.row-fluid
+  .span5
+
+    %h1 Dave Woodall
+    %p= link_to "@DMWoodall", 'http://www.twitter.com/dmwoodall'
+
+    %p Background in apparel, graphic design, finance, and entrepreneurship. Learning Rails and other supporting topics in order to launch an internet business, at the right time.
+
+    %hr
+    %button.btn Mentor
+    %button.btn Become a mentee
+
+
+/ I'll need to clean up this activity - probably put it into tabs...
+
+%hr
+%h2 Community
+.row-fluid
+  .span4
+    %h3 Mentors
+    %p stats go here
+  .span4
+    %h3 Mentees
+    %p stats go here
+
+
+
+%hr
+%h2 Activity
+.row-fluid
+  .span4
+    %h3 Projects
+    %p stats go here
+  .span4
+    %h3 Questions
+    %p stats go here
+
+  .span4
+    %h3 Goals
+    %p stats go here
+

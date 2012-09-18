@@ -7,12 +7,7 @@
 
     = javascript_include_tag "application"
     = csrf_meta_tags
-    / how do i install these types of links properly?
-    / http://twitter.github.com/bootstrap/scaffolding.html#responsive
-    / %meta name="viewport" content="width=device-width, initial-scale=1.0"
-    / %link_to "assets/css/bootstrap-responsive.css",  rel="stylesheet"
   %body
-    / how do i write a partial in haml?
   .container
     - flash.each do |name, msg|
       = content_tag :div, msg, id: "flash_#{name}"
@@ -23,6 +18,5 @@
         = render 'layouts/navbar'
 
   .container-fluid
-
     = yield
 

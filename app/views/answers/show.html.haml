@@ -1,0 +1,6 @@
+%h1 show
+
+- if @answer.user.present?
+  = @answer.user.name
+  - else
+  Anonymous

@@ -2,7 +2,9 @@
   - if current_user
     Welcome
     = current_user.name
-    = link_to "View Your Projects", projects_path
+    = link_to "Projects", projects_path
+    = link_to "Questions", questions_path
+    = link_to "Goals", goals_path
     |
     = link_to "Sign Out", signout_path
   - else

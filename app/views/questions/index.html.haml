@@ -15,7 +15,7 @@
       %td= question.topic
       %td= question.size
       %td= question.project.name
-      %td= link_to (rand(10))
+      %td= question.answer.blank? ? "N/A" : question.answers.count
       %td= question.visibility
 
 .btn= link_to 'New Question', new_question_path
