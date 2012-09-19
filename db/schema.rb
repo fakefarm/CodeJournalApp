@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120917161951) do
+ActiveRecord::Schema.define(:version => 20120918190157) do
 
   create_table "answers", :force => true do |t|
     t.text     "body"
@@ -22,34 +22,15 @@ ActiveRecord::Schema.define(:version => 20120917161951) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "goals", :force => true do |t|
-    t.boolean  "completed"
-    t.integer  "project_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "goals"
-    t.integer  "user_id"
-  end
-
-  create_table "libraries", :force => true do |t|
-    t.text     "to_read"
-    t.text     "have_read"
-    t.text     "to_watch"
-    t.text     "have_watched"
-    t.text     "to_view"
-    t.text     "have_viewed"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.text     "about"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.string   "url"
     t.string   "repo"
     t.integer  "user_id"
+    t.string   "project_type"
   end
 
   create_table "questions", :force => true do |t|
@@ -61,18 +42,6 @@ ActiveRecord::Schema.define(:version => 20120917161951) do
     t.datetime "updated_at", :null => false
     t.integer  "project_id"
     t.text     "answer"
-    t.integer  "user_id"
-  end
-
-  create_table "tasks", :force => true do |t|
-    t.text     "description"
-    t.text     "breadcrumb"
-    t.boolean  "complete"
-    t.string   "size"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-    t.string   "type_of_task"
-    t.integer  "project_id"
     t.integer  "user_id"
   end
 

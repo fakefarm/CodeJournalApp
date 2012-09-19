@@ -2,21 +2,19 @@
 %table.table.table-hover.table-condensed
   %tr
     %th Question
-    %th Topic
-    %th Size
+    %th User Story
+    %th Track
     %th Project
     %th Comments
-    %th Visibility
 
   - @questions.each do |question|
 
     %tr
       %td= link_to question.question, question
-      %td= question.topic
-      %td= question.size
+      %td= link_to question.topic
+      %td= question.project.project_type
       %td= question.project.name
       %td= question.answer.blank? ? "N/A" : question.answers.count
-      %td= question.visibility
 
 .btn= link_to 'New Question', new_question_path
 

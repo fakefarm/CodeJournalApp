@@ -3,8 +3,8 @@
   %tr
     %th Name
     %th Summary
+    %th Track
     %th Questions
-    %th Goals
     %th Tracker
     %th Repo
 
@@ -12,8 +12,8 @@
       %tr
         %td= link_to p.name, p
         %td.muted= p.about
+        %td= p.project_type
         %td= link_to p.questions.count, questions_path
-        %td= link_to p.goals.count, goals_path
         %td= link_to "", p.url, class: "i icon-file", target: "_blank"
         %td= link_to "", p.repo, class: "i icon-file", target: "_blank"
 

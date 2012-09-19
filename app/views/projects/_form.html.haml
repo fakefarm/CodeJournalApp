@@ -4,6 +4,10 @@
     =f.text_field :name
 
   .field
+    =f.label "Project Type"
+    =f.select :project_type, ["Social Network", "Ecommerce", "Blog"]
+
+  .field
     =f.label "Brief description of this project"
     =f.text_area :about, :rows => "5"
 

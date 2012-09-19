@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   has_many :questions
   has_many :projects
-  has_many :goals
-  has_many :tasks
   has_many :answers
 
   def self.from_omniauth(auth)

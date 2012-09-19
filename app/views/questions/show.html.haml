@@ -5,7 +5,7 @@
 %h2 Answers
 %hr
 - @question.answers.each do |answer|
-  %h4= link_to answer.title, answer
+  %h4= answer.title
   = answer.body
   %hr
 
