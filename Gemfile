@@ -6,11 +6,11 @@ gem 'haml'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
+group :development, :test do
   gem 'sqlite3'
   gem 'heroku'
   gem 'rspec-rails', '2.11.0'
-
+  gem "capybara", '1.1.2'
 end
 
 
@@ -28,11 +28,6 @@ group :assets do
   gem 'bootstrap-sass', '~> 2.1.0.0'
   gem 'uglifier', '>= 1.0.3'
 end
-
-group :test do
-  gem "capybara", '1.1.2'
-end
-
 
 gem 'jquery-rails'
 
