@@ -1,5 +1,6 @@
 class AnswersController < ApplicationController
 
+before_filter :find_user
 
   def index
     @answers = Answer.all
